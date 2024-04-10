@@ -15,8 +15,10 @@ class Char(str):  # inherit from str class
         customization of object creation
         """
         if len(char) != 1:
-            return TypeError("Expected single character")  # ensure correct usage
-        return super().__new__(cls, char)
+            raise Exception(TypeError("Expected single character"))
+        else:
+              # ensure correct usage
+            return super().__new__(cls, char)
         # inherits from built in string class
         # super creates a temporary str object, which allows you to call methods
         # on the 'super' class or parent class, str

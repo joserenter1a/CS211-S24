@@ -12,7 +12,8 @@ class TestCharMethods(unittest.TestCase):
         assert isinstance(c, Char)
     
     def test_bad_init(self):
-        c = Char('--')
+        with self.assertRaises(Exception):
+            c = Char('--')
 
     def test_str(self):
         c = Char('c')
@@ -31,7 +32,7 @@ class TestCharMethods(unittest.TestCase):
 
     def test_eq(self):
         b = Char('b')
-        c = Char('b')
+        c = 'b'
         assert b == c
 
     def test_gt(self):
