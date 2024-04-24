@@ -10,7 +10,6 @@ Bank Account Class
     self.__private_member
 """
 
-
 class BankAccount:
     def __init__(self, account_number, balance):
         """
