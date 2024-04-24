@@ -46,4 +46,5 @@ class Char(str):
             return self.c == other
         else:
             return False
-    
+        
+
