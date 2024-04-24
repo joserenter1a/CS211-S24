@@ -45,7 +45,7 @@ class Stack(deque):
         """
         return len(self.stack) == 0
 
-    def push(self, item):
+    def append(self, item):
         """
         Pushes element item onto the stack.
 
@@ -80,12 +80,4 @@ class Stack(deque):
         return self.stack[-1]
 
 
-    def size(self):
-        """
-        Returns the length of the stack
-
-        >>> st = Stack(['A'])
-        >>> st.size()
-        >>> 1
-        """
-        return len(self.stack)
+ 

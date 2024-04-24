@@ -7,12 +7,12 @@ class TestStackReversal(unittest.TestCase):
 
     def test_stack_init_and_push(self):
         s = Stack()
-        s.push(1)
-        assert s.size() == 1
+        s.append(1)
+        assert len(s) == 1
 
     def test_stack_pop(self):
         s = Stack()
-        s.push(1)
+        s.append(1)
         assert s.pop() == 1
 
     def test_reverse_same(self):
