@@ -17,6 +17,7 @@ https://docs.python.org/3/library/collections.html#collections.deque
 
 """
 
+
 from collections import deque
 
 class Stack(deque):
@@ -49,9 +50,12 @@ class Stack(deque):
         """
         Pushes element item onto the stack.
 
-        >>> st.push('A')
+        >>> st.append('A')7
         """
         self.stack.append(item)
+
+    def __len__(self):
+        return len(self.stack)
 
     def pop(self):
         """

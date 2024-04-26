@@ -7,9 +7,8 @@ Practice with stack data structure, understanding polymorphism
 
 """
 
-
-from collections import deque as stack  # import double ended queue as a stack implementation
-
+from stack import Stack  # import double ended queue as a stack implementation
+# from collections import deque as stack
 
 def reverse_string(string: str):
     pass # remove before starting
