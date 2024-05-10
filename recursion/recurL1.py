@@ -35,11 +35,14 @@ def largest_node(root: Internal):
 def main():
     l1 = Leaf(3)
     l2 = Leaf(6)
+    # Sentinel Node
     n = Leaf(None)
     i = Internal(7, l2, n)
     root = Internal(5, l1, i)
+    
     print(root)
     print(largest_node(root))
+
 
 if __name__ == '__main__':
     main()
