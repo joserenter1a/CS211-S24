@@ -1,4 +1,23 @@
-import random
+"""
+Implement bit stuffing and unstuffing methods for packet framing.
+
+"""
+
+def bit_stuffing(data):
+    stuffed_data = ''
+    ones = 0
+
+    for bit in data:
+        if bit == '1':
+            ones += 1
+            stuffed_data += bit 
+            if ones == 5:
+                stuffed_data += '0'
+                ones = 0
+        else:
+            stuffed_data += bit
+            ones = 0 
+    return stuffed_data
 
 
 def bit_unstuffing(stuffed_data):
@@ -21,18 +40,3 @@ def bit_unstuffing(stuffed_data):
         i += 1
     return unstuffed_data
 
-def bit_stuffing(data):
-    stuffed_data = ''
-    ones = 0
-
-    for bit in data:
-        if bit == '1':
-            ones += 1
-            stuffed_data += bit 
-            if ones == 5:
-                stuffed_data += '0'
-                ones = 0
-        else:
-            stuffed_data += bit
-            ones = 0 
-    return stuffed_data

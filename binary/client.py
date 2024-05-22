@@ -17,7 +17,7 @@ def main():
 
         # generate a new bit string to stuff, and wait 1 second
         original_data = bit_gen()
-        time.sleep(1)
+        time.sleep(3)
 
         # print
         print(f"Original Data: {original_data}")
