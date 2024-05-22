@@ -24,11 +24,16 @@ class Node:
 # work your way down the tree
 # leaf count of a tree = leaf count of left subtree + leaf count of right subtree
 def get_leaf_count(node):
+    # None, we dont want those nodes to contribute to our count
     if node is None:
+        # return 0
         return 0
+    # if the child is none AND the right child is None
     if (node.left is None and node.right is None):
+        # return 1
         return 1
     else:
+        # keep going and add the left amount + the right amount
         return get_leaf_count(node.left) + get_leaf_count(node.right)
 
 

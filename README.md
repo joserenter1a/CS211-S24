@@ -4,3 +4,5 @@
 - Wk02 - Encapsulation & Abstraction (getters & setters)
 - Wk03 - Stacks and Polymorphism
 - Wk04 - Midterm Review
+- Wk05 - Recursion Madness
+- Wk06 - Binary & Memory

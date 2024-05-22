@@ -31,8 +31,11 @@ class Internal(Node):
         return f'Node({self.value}, {self.left.__str__()},  {self.right.__str__()})'
 
 def largest_node(root: Internal):
+    # base case is if the right child is None
     if root.right.value is None:
+        # if that's true, then we're already on the largest node
         return root.value
+    # if not we keep going down the right side of the tree
     return largest_node(root.right)
 
 
