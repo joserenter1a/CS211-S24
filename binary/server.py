@@ -13,7 +13,7 @@ def handle_client(client_socket):
 
 def main():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-    port, host = 9000, 'localhost' or '127.0.0.1'
+    port, host = 9000, '127.0.0.1'
     server.bind((host, port))
     server.listen(1)
     print(f"Server listening on http://{host}:{port}")
@@ -24,6 +24,7 @@ def main():
             handle_client(client_socket)
     except KeyboardInterrupt:
         print("Server stopped")
+        server.close()
 
 if __name__ == '__main__':
     main()

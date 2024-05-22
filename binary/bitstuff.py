@@ -1,4 +1,5 @@
-import time
+import random
+
 
 def bit_unstuffing(stuffed_data):
     unstuffed_data = ''
