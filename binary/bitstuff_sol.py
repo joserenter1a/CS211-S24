@@ -4,7 +4,7 @@ Bit Stuffing and Un-Stuffing methods
 Author: Jose Renteria
 
 """
-import random
+import secrets
 
 class BitStuff():
 
@@ -12,7 +12,7 @@ class BitStuff():
         """
         Generates a random 32-bit binary string.
         """
-        return str(bin(random.randint(2147483648,4294967295)))[2:]
+        return str(bin(secrets.SystemRandom().randint(2147483648,4294967295)))[2:]
     
 
     def stuff(data):
